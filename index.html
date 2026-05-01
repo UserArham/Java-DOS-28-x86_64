@@ -687,29 +687,16 @@ document.addEventListener("DOMContentLoaded", () => {
         <button onclick="alert('Installing updates...'); location.reload();">Install Updates</button>
       </div>`);
     }
-  else if(a === "versions") {
+  eelse if(a === "versions"){
   // Versions app (simulator versions)
   const versions = ["Version 1: Basic J-DOS build, 15 paint colors, simple fixes."];
   
   let html = `<div style="display:flex;flex-direction:column;height:100%;overflow:auto;font-family:Segoe UI;">`;
-  
   versions.forEach(v => {
     html += `<div style="padding:6px 8px;border-bottom:1px solid #ccc;">${v}</div>`;
   });
-
-  // Insert your badge here
-  html += `
-    <div style="padding:12px; text-align:center;">
-      <a href="Java-DOS?utm_source=google" target="_blank">
-        <picture>
-          <source srcset="https://chromeos.dev" media="(prefers-color-scheme: dark)">
-          <img src="https://chromeos.dev" alt="Add to Chromebook" style="height:44px;"/>
-        </picture>
-      </a>
-    </div>`;
-
   html += `</div>`;
-}
+
   createWindow("Versions", html);
 }
   };

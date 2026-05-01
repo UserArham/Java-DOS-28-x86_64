@@ -222,7 +222,7 @@ body {
       <img id="user-icon" src="https://www.rw-designer.com/icon-image/22554-256x256x8.png" alt="User" width="32" height="32" style="margin-right:8px;">
       <span>Administrator</span>
     </div>
-    <menu class="menu">
+      <menu class="menu">
       <li class="menu-item" onclick="openApp('ie')" style="display:flex; align-items:center;">
         <img src="https://img.apponic.com/113/198/0d27a46dc4aabe1b3c4a90fb05883e04.png" alt="IE" width="16" height="16" style="margin-right:6px;">
         Internet Explorer
@@ -687,16 +687,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <button onclick="alert('Installing updates...'); location.reload();">Install Updates</button>
       </div>`);
     }
-  else if(a === "versions"){
+  else if(a === "versions") {
   // Versions app (simulator versions)
   const versions = ["Version 1: Basic J-DOS build, 15 paint colors, simple fixes."];
   
   let html = `<div style="display:flex;flex-direction:column;height:100%;overflow:auto;font-family:Segoe UI;">`;
+  
   versions.forEach(v => {
     html += `<div style="padding:6px 8px;border-bottom:1px solid #ccc;">${v}</div>`;
   });
-  html += `</div>`;
 
+  // Insert your badge here
+  html += `
+    <div style="padding:12px; text-align:center;">
+      <a href="Java-DOS?utm_source=google" target="_blank">
+        <picture>
+          <source srcset="https://chromeos.dev" media="(prefers-color-scheme: dark)">
+          <img src="https://chromeos.dev" alt="Add to Chromebook" style="height:44px;"/>
+        </picture>
+      </a>
+    </div>`;
+
+  html += `</div>`;
+}
   createWindow("Versions", html);
 }
   };

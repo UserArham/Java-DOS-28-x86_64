@@ -6,7 +6,7 @@ def create_window():
     app_window = tk.Toplevel(root)
     app_window.title("App")
     app_window.geometry("200x100")
-    tk.Label(app_window, text="Windows 7 App").pack(pady=20)
+    tk.Label(app_window, text="Java-DOS App").pack(pady=20)
 
 # Setup Main Desktop Environment
 root = tk.Tk()

@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isChrome = a==="chrome";
       const appName = isChrome ? "Google Chrome" : "Internet Explorer 10";
       const icon = isChrome 
-        ? "https://upload.wikimedia.org/wikipedia/commons/0/0e/Google_Chrome_icon_%28March_2011%29.svg" 
+        ? "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/960px-Google_Chrome_icon_%28September_2014%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20251129230835" 
         : "https://img.apponic.com/113/198/0d27a46dc4aabe1b3c4a90fb05883e04.png";
       createWindow(appName, `
         <div style="display:flex;flex-direction:column;height:100%">
@@ -576,9 +576,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.openApp = (a) => {
     if(a === "ie" || a === "chrome"){
       const isChrome = a === "chrome";
-      const appName = isChrome ? "Google Chrome" : "Internet Explorer 11";
+      const appName = isChrome ? "Google Chrome" : "Internet Explorer 10";
       const icon = isChrome
-        ? "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/960px-Google_Chrome_icon_%28September_2014%29.svg.png?_=20251129230835"
+        ? "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/960px-Google_Chrome_icon_%28September_2014%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20251129230835"
         : "https://img.apponic.com/113/198/0d27a46dc4aabe1b3c4a90fb05883e04.png";
 
       createWindow(appName, `
@@ -629,12 +629,12 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
     else if(a === "paint"){
-      // 15-color Paint
+      // 14-color Paint
       const colors = [
         "#000000","#808080","#C0C0C0","#FFFFFF",
         "#FF0000","#800000","#FFA500","#FFFF00",
         "#00FF00","#008000","#00FFFF","#008080",
-        "#0000FF","#000080","#B37757",
+        "#0000FF","#000080","00AAAAA"
       ];
       let html=`<div style="display:flex;flex-direction:column;height:100%"><div class="palette">`;
       colors.forEach(c => html += `<div class="color" style="background:${c}" onclick="window.pc='${c}'"></div>`);
@@ -687,9 +687,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <button onclick="alert('Installing updates...'); location.reload();">Install Updates</button>
       </div>`);
     }
-  eelse if(a === "versions"){
+  else if(a === "versions"){
   // Versions app (simulator versions)
-  const versions = ["Version 1: Basic J-DOS build, 15 paint colors, simple fixes."];
+  const versions = ["Version 1: Basic Windows 7 build, 8 paint colors, simple fixes.", "Version 2: 3 new bug fixes, Chrome app installed, and 10 new colors.", "Version 3: 3 new colors, and 1 bug fix; the styling.", "Version 4: Fixing Chrome 22 bug fixes..."];
   
   let html = `<div style="display:flex;flex-direction:column;height:100%;overflow:auto;font-family:Segoe UI;">`;
   versions.forEach(v => {
